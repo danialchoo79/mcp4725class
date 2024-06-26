@@ -19,4 +19,5 @@ extern float MCP_voltage;
 extern int DAC_value;
 
 void MCP4725_I2C_Start_and_Check();
+void MCP4725_Set_Voltage(float set_voltage);
 void MCP4725_Get_Voltage();

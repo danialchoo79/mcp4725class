@@ -39,18 +39,21 @@ void MCP4725_I2C_Start_and_Check()
     {
         // Indicate I2C Succeeded
         Serial.println("I2C Communications Succeeded - Sensor Found.");
-
-        // Set the Voltage on the MCP4725
-        DAC_value = MCP.setVoltage(5.0);
-
-        // Gets the Voltage on the DAC
-        MCP_voltage = MCP.getVoltage();
-
-        // Indicate Voltage Set
-        Serial.print("Successfully Set DAC to ");
-        Serial.print(MCP_voltage);
-        Serial.println(" Volts.");
     }
+}
+
+void MCP4725_Set_Voltage(float set_voltage)
+{
+    // Set the Voltage on the MCP4725
+    DAC_value = MCP.setVoltage(5.0);
+
+    // Gets the Voltage on the DAC
+    MCP_voltage = MCP.getVoltage();
+
+    // Indicate Voltage Set
+    Serial.print("Successfully Set DAC to ");
+    Serial.print(MCP_voltage);
+    Serial.println(" Volts.");
 }
 
 void MCP4725_Get_Voltage()

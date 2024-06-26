@@ -14,7 +14,9 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   MCP4725_I2C_Start_and_Check();
-  delay(5000);
+
+  MCP4725_Set_Voltage(5.0);
+  
   MCP4725_Get_Voltage();
 }
 
